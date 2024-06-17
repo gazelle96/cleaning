@@ -1,1 +1,9 @@
+To achieve the desire output of the task:
+1.	First, User enter the path to her/his Excel file.
+2.	Then the Algorithm unmerges the cells and assigns the related values for each data in the file and checks the format of the “Date of Birth” to be in a right German format (dd/mm/yyyy) as well in the same time.
+3.	Then ask user to enter desired ID with two options. (If entered ID is not correct, it waits until the correct one enters by user.)
+4.	Based on the selected option by user, the result will be saved in a new Excel file in a same path to the original file under the name of requested ID. (By selecting option 2, if the generated file is empty, it means that at least one information is missed for that user_ID and as a result, it is deleted in cleaning process.)
+
+P.s.1: In sample result given in the Task, the table of desired ID was shown with all related information for each user of that ID without considering the empty cells and thus preprocessing the data by cleaning it at first. That is why I thought maybe it is better to consider two options under: “Looking for an ID without cleaning the data” and “Looking for an ID after cleaning the data” based on user’s choice.
+P.s.2: In preprocessing the file by cleaning it (Unmerging cells, handling empty ones and old data which are not used by user anymore), Unfortunately I couldn’t first delete the rows containing x-shape. Actually, I could recognize the presence of that shapes in the file and tried to extract the location of those by looking for number of related rows and columns so that I could omit those old data. However, I couldn’t successfully extract the location of those marks. Consequently, the whole algorithm is valid under the condition that whether such shapes don’t exist at all or they’ve been already removed manually by the user in Excel.
 # cleaning
