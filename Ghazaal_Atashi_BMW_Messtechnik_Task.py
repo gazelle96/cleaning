@@ -3,10 +3,10 @@ import pandas as pd
 import os
 
 # Prompt the user for the path to the Excel file
-excel_file = input("Please enter the path to your Excel file (e.g., C:\\Users\\ASUS\\Downloads\\Sample_list.xlsx): ")
+excel_file_path = input("Please enter the path to your Excel file (e.g., C:\\Users\\ASUS\\Downloads\\Sample_list.xlsx): ")
 
 # Load the workbook and the first sheet
-wb = openpyxl.load_workbook(excel_file)
+wb = openpyxl.load_workbook(excel_file_path)
 ws = wb.active
 
 # Unmerging cells and propagate their values separately
@@ -26,7 +26,7 @@ def unmerge_and_propagate(ws):
 unmerge_and_propagate(ws)
 
 # Construct the output file path in the same directory as the original file
-directory = os.path.dirname(excel_file)
+directory = os.path.dirname(excel_file_path)
 output_file = os.path.join(directory, 'unmerged_file.xlsx')
 
 wb.save(output_file)

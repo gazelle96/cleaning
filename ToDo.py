@@ -3,13 +3,13 @@
 import pandas as pd
 import xlwings as xw
 
-excel_file = input("Please enter the path to your Excel file (e.g., C:\\Downloads\\Sample_list.xlsx): ")
+excel_file_path = input("Please enter the path to your Excel file (e.g., C:\\Downloads\\Sample_list.xlsx): ")
 
 # Connect to Excel application
 app = xw.App(visible=False)
 
 # Open the workbook
-wb = app.books.open(excel_file)
+wb = app.books.open(excel_file_path)
 
 for sheet in wb.sheets:
     print(f"Sheet: {sheet.name}")
